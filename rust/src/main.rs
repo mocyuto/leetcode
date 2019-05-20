@@ -1,7 +1,7 @@
 extern crate core;
 
-mod solution12;
-use solution12 as s;
+mod solution11;
+use solution11 as s;
 
 fn main(){
     s::main();

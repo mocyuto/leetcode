@@ -1,7 +1,7 @@
 extern crate core;
 
-mod solution20;
-use solution20 as s;
+mod solution200;
+use solution200 as s;
 
 fn main(){
     s::main();

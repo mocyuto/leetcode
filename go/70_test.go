@@ -31,3 +31,22 @@ func Test_climb(t *testing.T) {
 	assert.Equal(t, climbStairs(3), 3)
 	assert.Equal(t, climbStairs(4), 5) // 1,1,1,1  1,2,1, 2,2
 }
+
+func maxSubArray(nums []int) int {
+	m := nums[0]
+	tmpSum := 0
+	for _, n := range nums {
+		if tmpSum < 0 {
+			tmpSum = 0
+		}
+		tmpSum += n
+		if m < tmpSum {
+			m = tmpSum
+		}
+		println(n, tmpSum)
+	}
+	return m
+}
+func Test_maxSubArray(t *testing.T) {
+	assert.Equal(t, maxSubArray([]int{4, -1, 2, 1, -5, 3, -3, 4, -1, 2, 1, -5, 4}), 7)
+}
